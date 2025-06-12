@@ -1,11 +1,24 @@
 import './App.css';
-
+import Head from './components/Head';
+import Body from './components/Body'
 function App() {
   return (
-    <div className="text-blue-800">
-      <h1>hello </h1>
+    <div>
+      <Head/>
+      <Body/>
     </div>
   );
 }
 
 export default App;
+
+{/**
+  Head
+  body
+    -sidebar
+      -MenuItem
+    MainContainer
+      -ButtonList
+      -vedioContainer
+      -videoCard
+  */}
