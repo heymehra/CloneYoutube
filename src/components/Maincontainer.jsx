@@ -5,7 +5,7 @@ import Videocard from './Videocard'
 
 const Maincontainer = () => {
   return (
-    <div>
+    <div className='col-span-11'>
         <Buttonlist/>
         <Videocontainer/>
         <Videocard/>
