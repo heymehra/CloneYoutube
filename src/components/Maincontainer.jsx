@@ -2,6 +2,7 @@ import React from 'react'
 import Buttonlist from './Buttonlist'
 import Videocontainer from './Videocontainer'
 import Videocard from './Videocard'
+import Demo from './Demo'
 
 const Maincontainer = () => {
   return (
@@ -9,6 +10,7 @@ const Maincontainer = () => {
         <Buttonlist/>
         <Videocontainer/>
         <Videocard/>
+        <Demo/>
     </div>
   )
 }
