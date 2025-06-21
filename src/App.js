@@ -1,4 +1,4 @@
-import './App.css';
+
 import Head from './components/Head';
 import Body from './components/Body';
 import { Provider } from "react-redux"
@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Maincontainer from './components/Maincontainer';
 import WatchPage from './components/WatchPage';
 import Demo from './components/Demo';
+import Demo2 from './components/Demo2';
 const appRouter = createBrowserRouter([{
   path: "/",
   element: <Body/>,
@@ -20,8 +21,11 @@ const appRouter = createBrowserRouter([{
   },
   {
     path:'demo',
-    element:<Demo/>
-  }
+    element:<>
+    <Demo/>
+    <Demo2/>
+    </>
+  },
 
   ]
 }])
@@ -29,7 +33,7 @@ function App() {
   return (
     <Provider store={store}>
       <div>
-        <Head />
+        {/* <Head /> */}
         <RouterProvider router={appRouter}/>
       </div>
     </Provider>

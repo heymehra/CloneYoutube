@@ -6,31 +6,38 @@ const Sidebar = () => {
   const isMenuOpen = useSelector(store=>store.app.isMenuOpen);
   if(!isMenuOpen) return null; //Early Return pattern
   return (
-    <div className='p-5 shadow-lg w-48 mt-[88px] bg-white fixed top-0 left-0 right-0 z-50'>
-      <ul>
-        <Link to = "/"> 
-        <li>Home</li>
-        </Link>
-        <li>sports</li>
-        <li>Gaming</li>
-        <li>Movies</li>
-        <li>Watch history</li>
+      <div className='w-56 h-screen fixed top-[88px] left-0 bg-white shadow-lg overflow-y-auto px-4 py-6'>
+      {/* Navigation Section */}
+      <ul className='space-y-3'>
+        <li>
+          <Link to="/" className="hover:text-blue-500 transition-colors">Home</Link>
+        </li>
+        <li>
+          <Link to="/demo" className="hover:text-blue-500 transition-colors">Demo</Link>
+        </li>
+        <li className="hover:text-blue-500 cursor-pointer">Gaming</li>
+        <li className="hover:text-blue-500 cursor-pointer">Movies</li>
+        <li className="hover:text-blue-500 cursor-pointer">Watch history</li>
       </ul>
-      <h1 className='font-bold pt-5'>Subscription</h1>
-      <ul>
-        <li>Music</li>
-        <li>sports</li>
-        <li>Gaming</li>
-        <li>Movies</li>
-        <li>Watch history</li>
+
+      {/* Subscription Section */}
+      <h2 className='font-semibold text-gray-700 mt-6 mb-2 border-b pb-1'>Subscription</h2>
+      <ul className='space-y-2'>
+        <li className="hover:text-blue-500 cursor-pointer">Music</li>
+        <li className="hover:text-blue-500 cursor-pointer">Sports</li>
+        <li className="hover:text-blue-500 cursor-pointer">Gaming</li>
+        <li className="hover:text-blue-500 cursor-pointer">Movies</li>
+        <li className="hover:text-blue-500 cursor-pointer">Watch history</li>
       </ul>
-        <h1 className='font-bold pt-5'>Watch Later </h1>
-      <ul>
-        <li>Music</li>
-        <li>sports</li>
-        <li>Gaming</li>
-        <li>Movies</li>
-        <li>Watch history</li>
+
+      {/* Watch Later Section */}
+      <h2 className='font-semibold text-gray-700 mt-6 mb-2 border-b pb-1'>Watch Later</h2>
+      <ul className='space-y-2'>
+        <li className="hover:text-blue-500 cursor-pointer">Music</li>
+        <li className="hover:text-blue-500 cursor-pointer">Sports</li>
+        <li className="hover:text-blue-500 cursor-pointer">Gaming</li>
+        <li className="hover:text-blue-500 cursor-pointer">Movies</li>
+        <li className="hover:text-blue-500 cursor-pointer">Watch history</li>
       </ul>
     </div>
   )
